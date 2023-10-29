@@ -1,5 +1,6 @@
 package ie.atu;
 
+import java.util.Scanner;
 public class Student {
     private String Name;
     private String Email;
@@ -11,6 +12,20 @@ public class Student {
         this.Email = "";
         this.Course = "";
     }
+
+    public void getStudentInfo(){ //user prompt for details
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter student name: ");
+        this.Name = scanner.nextLine();
+
+        System.out.println("Enter student email: ");
+        this.Email = scanner.nextLine();
+
+        System.out.println("Enter course: ");
+        this.Course = scanner.nextLine();
+    }
+
     //getters and setters
     public String getName(){
         return Name;
@@ -34,5 +49,9 @@ public class Student {
 
     public void setCourse(String Course){
         this.Course = Course;
+    }
+
+    public void displayInfo() {
+        System.out.println("Student Name: " + Name+ ", Email:"+ Email + ", Course: " + Course );
     }
 }
