@@ -1,6 +1,6 @@
 package ie.atu;
 
-import java.util.Scanner;
+import java.util.Scanner; //allows use of scanner
 public class Student {
     private String Name;
     private String Email;
@@ -12,6 +12,13 @@ public class Student {
         this.Email = "";
         this.Course = "";
     }
+
+    public Student(String Name, String Email, String Course){
+        this.Name = Name;
+        this.Email = Email;
+        this.Course = Course;
+    }
+
 
     public void getStudentInfo(){ //user prompt for details
         Scanner scanner = new Scanner(System.in);
