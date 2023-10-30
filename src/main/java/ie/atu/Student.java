@@ -2,21 +2,21 @@ package ie.atu;
 
 import java.util.Scanner; //allows use of scanner
 public class Student {
-    private String Name;
-    private String Email;
-    private String Course;
+    private String name; //sets these strings private so they cant be changed outside the student class
+    private String email;
+    private String course;
 
     //default constructor
     public Student(){
-        this.Name = "";
-        this.Email = "";
-        this.Course = "";
+        this.setName(name); //for instances in which the set name would have parameters. forces use to follow these
+        this.setEmail(email);
+        this.setCourse(course);
     }
 
-    public Student(String Name, String Email, String Course){
-        this.Name = Name;
-        this.Email = Email;
-        this.Course = Course;
+    public Student(String name, String email, String course){
+        this.name = name; //sets the name variable to the variable in this constructor
+        this.email = email;
+        this.course = course;
     }
 
 
@@ -24,41 +24,35 @@ public class Student {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter student name: ");
-        this.Name = scanner.nextLine();
+       this.name= scanner.nextLine();
 
         System.out.println("Enter student email: ");
-        this.Email = scanner.nextLine();
+        this.email = scanner.nextLine();
 
         System.out.println("Enter course: ");
-        this.Course = scanner.nextLine();
+        this.course = scanner.nextLine();
     }
 
     //getters and setters
     public String getName(){
-        return Name;
+        return name;
     }
-
-    public void setName(String Name){
-        this.Name = Name;
+    public void setName(String name){ // setters would be used to add restrictions. eg name should have no numbers.
+        this.name = name; //when we scan the input it sets this to parameter
     }
-
     public String getEmail(){
-        return Email;
+        return email;
     }
-
-    public void setEmail(String Email){
-        this.Email = Email;
+    public void setEmail(String email){
+        this.email = email;
     }
-
     public String getCourse(){
-        return Course;
+        return course;
     }
-
-    public void setCourse(String Course){
-        this.Course = Course;
+    public void setCourse(String course){
+        this.course = course;
     }
-
     public void displayInfo() {
-        System.out.println("Student Name: " + Name+ ", Email:"+ Email + ", Course: " + Course );
+        System.out.println("Student Name: " + getName() + ", Email:"+ getEmail() + ", Course: " + getCourse() );
     }
 }
