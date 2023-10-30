@@ -19,6 +19,10 @@ public class Student {
         this.course = course;
     }
 
+    public Student(String name){
+        this.name = name;
+    }
+
 
     public void getStudentInfo(){ //user prompt for details
         Scanner scanner = new Scanner(System.in);
