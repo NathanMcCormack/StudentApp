@@ -6,7 +6,7 @@ public class StudentApp {
         Student student2 = new Student("");
         Student student3 = new Student("", "", "");
 
-        System.out.println("Enter details for first student: ");
+        System.out.println("Enter details of first student: ");
         student1.getStudentInfo();
 
         System.out.println("Enter details of second student: ");

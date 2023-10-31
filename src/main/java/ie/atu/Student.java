@@ -8,7 +8,7 @@ public class Student {
 
     //default constructor
     public Student(){
-        this.setName(name); //for instances in which the set name would have parameters. forces use to follow these
+        this.setName(name); //for instances in which the set name would have parameters. forces user to follow these
         this.setEmail(email);
         this.setCourse(course);
     }
